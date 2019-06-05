@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>商品详情页</h1>
+	</body>
+	<script>
+		var obody = document.querySelector("body");
+		var goodsurl = "http://localhost/1903PHP/tongmengshangcheng/json/goods.json";
+		function ajax(url,fn){
+			var ajax=new XMLHttpRequest;
+			ajax.open("GET",url,true);
+			ajax.onreadystatechange=function(){
+				if(ajax.readyState == 4&&ajax.status == 200){
+					fn(ajax.responseText)
+				}
+			}
+			ajax.send();
+		}
+		ajax(goodsurl,function(res){
+			display(JSON.parse(res))
+		})
+		function display(data){
+			for(var i=0;i<data.length;i++){
+				if(data[i].id == localStorage.index){
+					var img = document.createElement("img")
+					img.src = data[i].url;
+					obody.appendChild(img);
+				}
+			}
+		}
+	</script>
+</html>

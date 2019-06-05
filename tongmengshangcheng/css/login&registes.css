@@ -1,0 +1,18 @@
+*{margin:0;padding:0;}
+a{cursor:pointer;}
+header{height:58px;background:#111;}
+header .log{width:144px;height:58px;background:#a00 url(../images/logo.fff.png) no-repeat center;float:left;}
+header .header-l{color:#fff;display:flex;align-items:center;height:58px;float:left;}
+header .header-l a{height:16px;padding:0 15px;font:14px/16px "";border-right:1px solid #585858;}
+header .header-l a:last-child{border:none;}
+header .header-l a:hover{color:#f60;}
+header .header-r{float:right;color:#ccc;display:flex;height:58px;align-items:center;font-size:12px;margin-right:20px;}
+header .header-r span{margin:0 10px;}
+header form{border:1px solid #404040;display:flex;width:168px;margin-right:20px;}
+header form .txt{border:0;width:140px;background:#1f1f1f;color:#fff;}
+header form .search{border:0;width:28px;height:28px;background:#1f1f1f;color:#ccc;}
+#onlog{height:200px;width:400px;display:flex;flex-direction:column ;justify-content:space-around;position: absolute;left:0;right:0;margin:auto;top:200px;}
+#onlog .inp{width:398px;height:44px;font-size:18px;border:1px solid #cfdadd;border-radius:2px;font-weight:300;box-sizing:border-box;padding:0 5px;}
+#btn{width:60px;height:30px;border:0;cursor:pointer;background:#007BFF;color:#F2F2F2;border-radius:3px;margin-right:20px;}
+#btn:active{background:#0039A5;}
+#post:hover{color:red;}

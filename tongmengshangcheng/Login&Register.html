@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link href="css/login&registes.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<header>
+			<a class="log">
+			</a>
+			<div class="header-l">
+				<a>机床</a>
+				<a>机械</a>
+				<a>建材</a>
+				<a>展会</a>
+				<a>机器人</a>
+				<a>汽车</a>
+				<a>化工</a>
+				<a>农副产品</a>
+				<a>招商加盟</a>
+				<a>培训</a>
+				<a>二手</a>
+				<a>服务</a>
+			</div>
+			<div class="header-r">
+				<form>
+					<input type="text" class="txt"/>
+					<input type="button" value="搜索" class="search"/>
+				</form>
+				<a id="username">登录</a><span>|</span><a id="logout">注册</a>
+			</div>
+		</header>
+		<div id="onlog">
+			<h3 id="title">云同盟账号登录</h3>
+			<input type="text" id="user" placeholder="用户名" class="inp"/>
+			<input type="text" id="pass"placeholder="密码" class="inp"/>
+			<div>
+				<input type="button" value="登录" id="btn"/>
+				<a id="post">注册</a>
+			</div>
+		</div>
+	</body>
+	<script>
+		class login{
+			constructor(){
+				var that = this;
+				this.title = document.getElementById("title");
+				this.post = document.getElementById("post");
+				this.user = document.getElementById("user");
+				this.pass = document.getElementById("pass");
+				this.obtn = document.getElementById("btn");
+				this.username = document.getElementById("username");
+				this.logout = document.getElementById("logout");
+				this.set = "http://localhost/1903PHP/tongmengshangcheng/PHP/login.php";
+				this.get = "http://localhost/1903PHP/tongmengshangcheng/PHP/getdata.php";
+				this.onoff = 0;
+				ajaxpost(that.get,function(res){
+					that.data=JSON.parse(res);
+					that.init();
+				})
+				this.getcookie();
+			}
+			init(){
+				var that = this;
+				this.post.onclick=function(){
+					if(this.innerHTML == "注册"){
+						this.innerHTML = "登录";
+						that.title.innerHTML = "云同盟账号注册";
+						that.obtn.value = "注册";
+						that.register();
+					}else{
+						this.innerHTML = "注册";
+						that.title.innerHTML = "云同盟账号登录";
+						that.obtn.value = "登录";
+						that.start();
+					}
+				}
+				this.start();
+			}
+			start(){
+				var that = this;
+				this.obtn.onclick=function(){
+					var sta = 0
+					for(var i=0;i<that.data.length;i++){
+						if(that.data[i].user == that.user.value&&that.data[i].pass == that.pass.value){
+							alert("登录成功！");
+							sta =0;
+							that.success();
+							break;
+						}else{
+							sta = 1;
+						}
+					}
+					if(sta == 1){
+						alert("请输入正确的账号密码！");
+					}
+				}
+			}
+			register(){
+				var that = this;
+				this.obtn.onclick=function(){
+					var str = 0;
+					for(var i=0;i<that.data.length;i++){
+						if(that.data[i].user == that.user.value){
+							alert("账号名重复请更改后再注册")
+							str = 0;
+							break;
+						}else{
+							str = 1;
+						}
+					}
+					if(str == 1){
+						ajaxpost(that.set,function(res){
+							alert("注册成功！");
+						},{
+							user:that.user.value,
+							pass:that.pass.value,
+						});
+					}
+				}
+			}
+			success(){
+				var d = new Date();
+				d.setDate(d.getDate()+3);
+				console.log(d);
+				document.cookie = "landing="+this.user.value+";expires="+d;
+				this.getcookie();
+			}
+			getcookie(){
+				var a = document.cookie;
+				if(a){
+					var that = this;
+					this.username.innerHTML = "用户";
+					this.logout.innerHTML = "注销";
+					this.logout.onclick=function(){
+						var d = new Date();
+						d.setDate(d.getDate()-1);
+						document.cookie = "landing="+that.user.value+";expires="+d;
+						history.go(0);
+					}
+				}
+			}
+		}
+		new login();
+		function ajaxpost(url,fun,data){
+			var src = "";
+			if(data){data=data}else{data={}};
+			for(var i in data){
+				src += i+"="+data[i]+"&"
+			}
+			var ajax = new XMLHttpRequest();
+			ajax.open("POST",url,true);
+			ajax.onreadystatechange=function(){		
+				if(ajax.readyState == 4&&ajax.status == 200){
+					fun(ajax.responseText);
+				}
+			}
+			ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+			ajax.send(src.slice(0,src.length-1));
+		}
+	</script>
+</html>
