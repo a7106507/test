@@ -1,4 +1,5 @@
 @charset "utf-8";
+*{margin:0;padding:0;}
 .layout{width:1200px;margin:0 auto;}
 a{cursor:pointer;}
 #top{height:28px;background:#f2f2f2;line-height:28px;color:#666;}
@@ -38,3 +39,7 @@ a{cursor:pointer;}
 #ftnav{text-align:center;height:36px;background:#000000;}
 #ftnav a{color:#fff;line-height:36px;margin:0 5px;}
 #footer .footer-t{width:100%;text-align:center;line-height: 22px;}
+#nav{height:38px;background:#020202;text-align:center;}
+#nav .menu4{height:38px;width:840px;float:left;}
+#nav .menu4 a{width:120px;color:#fff;float:left;height:38px;font:500 14px/38px "";}
+#nav .menu4 a:hover{background:#eb155b;}

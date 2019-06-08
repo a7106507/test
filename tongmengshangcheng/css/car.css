@@ -1,0 +1,10 @@
+#cont{}
+#cont dl{width:800px;margin:20px auto;border:1px solid #020202;}
+#cont dl dt{font:600 18px/36px "";color:#FFF;background:#020202;text-indent:1rem;}
+#cont dl dd{box-sizing:border-box;padding:0 10px;display:flex;justify-content:space-around;align-items:center;border-top:1px solid #020202;}
+#cont dl dd .checkbox{}
+#cont dl dd img{width:60px;} 
+#cont dl dd p{width:200px;overflow:hidden;display:inline-block;text-overflow:ellipsis;white-space:nowrap;}
+#cont dl dd .num{height:18px;text-align:right;}
+#cont dl dd span{width:80px;height:32px;background:#ED145B;color:#fff;text-align:center;line-height:32px;cursor:pointer;}
+#cont dl dd span:active{opacity:.7;}

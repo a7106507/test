@@ -136,11 +136,11 @@ var ocode = document.getElementsByClassName("code");
 			var src = "";
 			for(var i=0;i<this.num;i++){
 				src = src+`<li>
-							<a class="goods-img" href="details.html" target="_blank"><img src="${this.data[i].url}" index="${this.data[i].id}"/></a>
-							<a class="title" index="${this.data[i].id}" href="details.html" target="_blank">${this.data[i].name}</a>
-							<p>市场价：<span>${this.data[i].price}</span></p>
-							<p>本店价： <i>电话联系</i></p>
-						</li>`
+								<a class="goods-img" href="details.html" target="_blank"><img src="${this.data[i].url}" index="${this.data[i].id}"/></a>
+								<a class="title" index="${this.data[i].id}" href="details.html" target="_blank">${this.data[i].name}</a>
+								<p>市场价：<span>${this.data[i].price}</span></p>
+								<p>本店价： <i>电话联系</i></p>
+							</li>`
 			}
 			this.oele.innerHTML = src;
 		}
@@ -153,35 +153,6 @@ var ocode = document.getElementsByClassName("code");
 		new newgoods(goodsurl,ele4,5);
 		var ele5 = document.getElementById("new-goods-5");
 		new newgoods(goodsurl,ele5,5);
-		function land(){
-			this.header = document.getElementsByClassName("header-l")[0];
-			this.init();
-		}
-		land.prototype.init=function(){
-			var cookie = document.cookie;
-			if(cookie){
-				var res = `<p>欢迎光临云同盟商城</p>
-							<a>用户</a>
-							<span>|</span>
-							<a>注销</a>`
-				this.header.innerHTML = res;
-				this.logout();
-			}
-		}
-		land.prototype.logout=function(){
-			var that = this;
-			this.header.onclick=function(eve){
-				var e = eve || window.event;
-				var target = e.target||e.srcElement;
-				if(target.innerHTML == "注销"){
-					var d = new Date();
-					d.setDate(d.getDate()-1);
-					document.cookie = "landing=123134;expires="+d;
-					history.go(0);
-				}
-			}
-		}
-		new land();
 		class index{
 			constructor(){
 				var that = this;

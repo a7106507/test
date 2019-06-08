@@ -33,6 +33,7 @@
 .new-goods dd ul{display:flex;justify-content:space-around;flex-wrap:wrap;}
 .new-goods dd ul li{margin:10px 0;}
 .new-goods dd ul li .goods-img{width:220px;display:block;border:1px solid #ddd;}
+.new-goods dd ul li .goods-img img{width:100%;}
 .new-goods dd ul li .title{width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:inline-block;}
 .new-goods dd ul li span{text-decoration:line-through;color:#999;}
 .new-goods dd ul li i{font-weight:600;color:red;}

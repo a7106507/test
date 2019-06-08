@@ -3,13 +3,218 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<link href="css/details.css" rel="stylesheet" type="text/css" />
+		<link href="css/head.css" rel="stylesheet" type="text/css" />
+		<link href="css/public.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
-		<h1>商品详情页</h1>
+		<div id="top">
+			<div class="layout">
+				<div class="header-l">
+					<p>欢迎光临云同盟商城</p>
+					<a href="Login&Register.html" target="_blank">登录</a>
+					<span>|</span>
+					<a href="Login&Register.html" target="_blank">注册</a>
+				</div>
+				<div class="header-r">
+					<a onclick="landcar()">查看购物车</a>
+					<a>选购中心</a>
+					<a>标签云</a>
+					<a>收藏本站</a>
+					<span>关于我们：</span>
+					<a class="code"></a>
+					<div class="bigcode">
+						<img src="images/weixin.jpg"/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="head" class="layout">
+			<a id="logo"><img src="images/logo.png"/></a>
+			<form>
+				<input type="text" id="txt" />
+				<input type="button" id="btn" value="搜索产品" />
+			</form>
+			<div id="shppingcar" onclick="landcar()">
+				<img src="images/cart.gif"/>
+				<span>去购物车结算</span>
+			</div>
+		</div>
+		<div id="nav">
+			<div class="layout">
+				<div class="menu4">
+					<a href="index.html">首页</a>
+					<a>品牌专区</a>
+					<a>数控机床</a>
+					<a>机器人</a>
+					<a>云南机床</a>
+					<a>上机磨床</a>
+					<a>威达重工</a>
+				</div>
+			</div>
+		</div>
+		<div id="cont" class="layout">
+			<div class="cont-l">
+				<dl>
+					<dt>所有商品分类</dt>
+					<dd><img src="images/btn_fold.gif"/>数控卧式铣镗床</dd>
+					<dd><img src="images/btn_fold.gif"/>数控落地铣镗床</dd>
+					<dd><img src="images/btn_fold.gif"/>数控刨台式铣镗床</dd>
+					<dd><img src="images/btn_fold.gif"/>数控双面镗铣床</dd>
+					<dd><img src="images/btn_fold.gif">数控专用镗床</dd>
+				</dl>
+				<div class="history">
+						<h3>浏览历史</h3>
+						<p>无有效的历史记录</p>
+				</div>
+			</div>
+			<div class="cont-r">
+				<div class="comimg">
+					
+				</div>
+				<div class="details">
+					<h3 id="name">营口冠华 YB3120K/Y3150K/Y3180K/Y31125K滚齿机</h3>
+					<dl>
+						<dt>本店售价：<h2>￥电话联系</h2></dt>
+						<dd>商品货号：<p id="goodsid"></p></dd>
+						<dd>上架时间：2018-01-18 </dd>
+						<dd>联系方式：李经理13937106620/13653860916</dd>
+					</dl>
+					<div class="collect">
+						<a>收藏</a><span>|</span><a>推荐</a>
+					</div>
+					<form>
+						购买数量：<input type="text" id="num" value="1"/></br>
+						<img src="images/goumai2.gif" id="imgbtn" />
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="layout">
+				<ul class="link">
+					<li>
+						<dl>
+							<dt><i></i>云南机床</dt>
+							<dd>云南机床 CY-VTC</dd>
+							<dd>云南机床 CY-</dd>
+							<dd>云南机床 CY-CTC</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt><i></i>抚顺插床</dt>
+							<dd>插床概念 插床分</dd>
+							<dd>插床工操作插床时</dd>
+							<dd>插床配件</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt><i></i>欧瑞液压</dt>
+							<dd>四柱液压机油缸如</dd>
+							<dd>小型液压机中的液</dd>
+							<dd>四柱液压机液压卡</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt><i></i>威达重工</dt>
+							<dd>立式加工中心辅助</dd>
+							<dd>威达重工详解数控</dd>
+							<dd>山东威达重工资质</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt><i></i>自贡钻床</dt>
+							<dd>操作摇臂钻床注意</dd>
+							<dd>摇臂钻床的概念</dd>
+							<dd>摇臂钻床使用过程</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt><i></i>嘉湖数控</dt>
+							<dd>嘉湖数控机床加工</dd>
+							<dd>浙江嘉湖数控车床</dd>
+							<dd>浙江嘉湖机床有限</dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+			<div class="line">
+				<i></i>
+				<span></span>
+			</div>
+			<div class="layout">
+				<ul class="tas">
+					<li>
+						<div></div>
+						<h3>中国领先</h3>
+						<span>数控电商服务平台</span>
+					</li>
+					<li>
+						<div></div>
+						<h3>中国领先</h3>
+						<span>数控电商服务平台</span>
+					</li>
+					<li>
+						<div></div>
+						<h3>中国领先</h3>
+						<span>数控电商服务平台</span>
+					</li>
+					<li>
+						<div></div>
+						<h3>中国领先</h3>
+						<span>数控电商服务平台</span>
+					</li>
+					<li>
+						<div></div>
+						<h3>中国领先</h3>
+						<span>数控电商服务平台</span>
+					</li>
+					<li>
+						<div></div>
+						<h3>中国领先</h3>
+						<span>数控电商服务平台</span>
+					</li>
+					<li>
+						<div></div>
+						<h3>中国领先</h3>
+						<span>数控电商服务平台</span>
+					</li>
+					<li>
+						<div></div>
+						<h3>中国领先</h3>
+						<span>数控电商服务平台</span>
+					</li>			
+				</ul>
+			</div>
+			<div id="ftnav">
+				<div class="layout">
+					<a>云同盟商城介绍</a>
+					<a>联系我们</a>
+					<a>自贡钻床</a>
+					<a>芜湖立车镗床</a>
+					<a>上海冲剪</a>
+					<a>营口机床</a>
+				</div>
+			</div>
+			<div class="footer-t">
+				<p>©2017-2027 云同盟商城 版权所有 ICP备案证书号:豫ICP备08100686号</p>
+				<span>汇聚品牌，100%正品、实惠方便、首选！ Tel: 400-690-6610 联系QQ：1210177711 1210179955</span>
+				<div class="footer-link">友情链接:<a>云同盟</a><span>|</span><a>云同盟规范新导航</a></div>
+			</div>
+		</div>
 	</body>
+	<script src="js/land.js"></script>
+	<script src="js/landcar.js"></script>
 	<script>
-		var obody = document.querySelector("body");
+		var ocomimg = document.querySelector(".comimg");
 		var goodsurl = "http://localhost/1903PHP/tongmengshangcheng/json/goods.json";
+		var oname = document.getElementById("name");
+		var goodsid = document.getElementById("goodsid");
 		function ajax(url,fn){
 			var ajax=new XMLHttpRequest;
 			ajax.open("GET",url,true);
@@ -24,13 +229,95 @@
 			display(JSON.parse(res))
 		})
 		function display(data){
+			console.log(localStorage.index);
 			for(var i=0;i<data.length;i++){
 				if(data[i].id == localStorage.index){
 					var img = document.createElement("img")
+					console.log(1);
 					img.src = data[i].url;
-					obody.appendChild(img);
+					ocomimg.appendChild(img);
+					oname.innerHTML = data[i].name;
+					goodsid.innerHTML = data[i].id;
 				}
 			}
 		}
+		class state{
+			constructor(){
+				this.cookie = document.cookie;
+				this.collect = document.getElementsByClassName("collect")[0];
+				this.obtn = document.getElementById("imgbtn");
+				this.init();
+			}
+			init(){
+				var that = this;
+				this.collect.onclick=function(eve){
+					var e = eve||window.event;
+					var target = e.target||e.srcElement;
+					console.log(target);
+					if(that.cookie){
+						if(target.innerHTML == "收藏"){
+							alert("收藏成功");
+						}
+						if(target.innerHTML == "推荐"){
+							alert("推荐成功");
+						}
+					}else{
+						if(target.innerHTML == "收藏"||target.innerHTML == "推荐"){
+							alert("请登录后再执行以下操作！");
+						}
+					}
+					console.log(target.innerHTML);
+				}
+			}
+		}
+		new state();
+		class shooppingcar{
+			constructor(){
+				this.obtn = document.getElementById("imgbtn");
+				this.onum = document.getElementById("num");
+				this.cookie = document.cookie;
+				this.init();
+			}
+			init(){
+				this.index = localStorage.index;
+				var that = this;
+				var obj = {index:this.index,num:this.onum.value};
+				this.obtn.onclick=function(){
+					if(that.cookie){
+						that.join();
+					}else{
+						console.log(1);
+						alert("请登录后再进行以下操作");
+					}
+				}
+			}
+			join(){
+				var onoff = 0;
+				if(localStorage.goods){
+					this.data = JSON.parse(localStorage.goods);
+					for(var i=0;i<this.data.length;i++){
+						if(this.data[i].index == this.index){
+							this.data[i].num = parseInt(this.data[i].num) + parseInt(this.onum.value);
+							onoff = 0;
+							break;
+							}else{
+								onoff = 1
+							}
+						}
+						if(onoff == 1||!this.data[0]){
+							this.data.push(
+								{
+									index:this.index,
+									num:this.onum.value
+								}
+					)
+				}
+					localStorage.goods = JSON.stringify(this.data);
+				}else{
+					localStorage.goods = JSON.stringify([{index:this.index,num:this.onum.value}]);
+				}
+			}
+		}
+		new shooppingcar();
 	</script>
 </html>

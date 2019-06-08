@@ -1,0 +1,23 @@
+#cont{padding:40px 0;display:flex;}
+#cont .cont-l{width:240px;}
+#cont .cont-l dt{height:40px;background:#EB155B;color:#fff;font-size:16px;text-align:center;line-height:40px;}
+#cont .cont-l dd{height:35px;line-height:35px;font-weight:600;color:#666;}
+#cont .cont-l dd img{margin-right:10px;}
+#cont .cont-l .history{border:1px solid #ddd;margin-top:10px;}
+#cont .cont-l .history h3{height:38px;line-height:38px;font-size:14px;background:#F5F5F5;text-indent:1em;color:#666;}
+#cont .cont-l .history p{height:34px;color:#666;font-size:14px;line-height:34px;text-indent:1em;}
+#cont .cont-r{width:960px;display:flex;}
+#cont .cont-r .comimg{margin:0 40px;}
+#cont .cont-r .comimg img{width:300px;height:300px;border:1px solid #ccc;}
+#cont .cont-r .details{color:#666;}
+#cont .cont-r .details h3{font-size:18px;height:38px;line-height:38px;color:#666;}
+#cont .cont-r .details dl {border-top:1px solid #ccc;border-bottom:1px solid #ccc;}
+#cont .cont-r .details dl dt{height:38px;display:flex;align-items:center;}
+#cont .cont-r .details dl dt h2{color:#EB155B;font-size:28px;}
+#cont .cont-r .details dl dd{height:30px;display:flex;align-items:center;}
+#cont .cont-r .details .collect{margin:10px 0;}
+#cont .cont-r .details .collect a{color:#EB155B;}
+#cont .cont-r .details .collect span{margin:0 5px;}
+#cont .cont-r .details form #num{width:45px;}
+#cont .cont-r .details form #imgbtn{margin:20px 0;cursor:pointer;}
+#cont .cont-r .details form #imgbtn:hover{opacity:.8;}
